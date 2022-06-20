@@ -1,0 +1,55 @@
+@import "../variables.module";
+
+// LANDING
+.landingPage {
+  // color: pink;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .titleContainer {
+    .title,
+    .subtitle {
+      line-height: 0.5rem;
+      text-align: center;
+      text-shadow: 5px 5px 5px $shadows;
+    }
+    .title {
+      font-size: 6rem;
+      animation: 1s ease 0s 1 slideInLeft;
+    }
+    .subtitle {
+      font-size: 2rem;
+      visibility: hidden;
+      animation: 0.1s forwards fadeIn, 1s ease 0.1s 1 slideInLeft;
+      // animation: 1s ease 1s 1 slideInLeft;
+    }
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-200%);
+  }
+  // 50% {
+  //   transform: translateX(-30%);
+  // }
+  70% {
+    transform: translateX(3%);
+  }
+  // 90%{
+  //   transform: translateX(-10%);
+  // }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
