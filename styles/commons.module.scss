@@ -19,12 +19,13 @@
     justify-content: center;
     align-items: center;
     line-height: 1rem;
+    font-size: 1.2rem;
 
     * {
       min-width: 7rem;
       text-align: center;
       padding: 0.5rem 1rem 0.9rem 1rem;
-      margin: 0 1rem;
+      // margin: 0 0.2rem;
       text-shadow: 2px 2px 2px $shadows;
     }
 
@@ -47,11 +48,11 @@
   justify-content: center;
   align-items: center;
   color: $light;
-  
+
   .footerContainer {
     p {
       a {
-        font-weight:700;
+        font-weight: 700;
 
         &:hover {
           text-decoration: underline;
@@ -70,6 +71,28 @@
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+//MEDIAQUERY
+@media screen and (min-width: $tablet) {
+  .header {
+    nav {
+      * {
+        margin: 0 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .landingPage {
+    .titleContainer {
+      .title {
+        font-size: 6rem;
+      }
+    }
+  }
+}
+
+// ANIMAZIONI
 @keyframes slideInTop {
   0% {
     transform: translateY(-200%);
@@ -77,7 +100,7 @@
   // 50% {
   //   transform: translateX(-30%);
   // }
-  70%{
+  70% {
     transform: translateY(3%);
   }
   // 90%{

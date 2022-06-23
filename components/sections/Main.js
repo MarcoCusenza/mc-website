@@ -1,5 +1,5 @@
 import styles from "../../styles/sectionstyle/main.module.scss";
-import commonStyles from "../../styles/commons.module.scss"
+import commonStyles from "../../styles/commons.module.scss";
 
 import Landing from "./Landing";
 import Works from "./Works";
@@ -23,13 +23,13 @@ export default function Main() {
           touchControls: true,
           gyroControls: false,
           minHeight: 200.0,
-          minWidth: 200.0,
+          minWidth: 100.0,
           scale: 1.0,
           scaleMobile: 1.0,
-          color: 0xff5f8c,
+          color: 0xcaff69,
           backgroundColor: 0x3c3c3c,
-          points: 12.0,
-          maxDistance: 20.0,
+          points: 6.0,
+          maxDistance: 15.0,
           showDots: false,
         })
       );
