@@ -50,7 +50,10 @@
     color: $light;
 
     .footerContainer {
-        p {
+        .developedBy {
+            padding-inline: 1.5rem;
+            text-align: center;
+
             a {
                 font-weight: 700;
 
