@@ -2,88 +2,95 @@
 
 // LANDING
 .landingPage {
-  // color: pink;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .titleContainer {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-    .title,
-    .subtitle {
-      margin: 0px 0px;
-      text-align: center;
-      text-shadow: 5px 5px 3px $shadows;
-    }
-    .title {
-      font-size: 4rem;
-      animation: 1s ease 0s 1 slideInLeft;
+    // color: pink;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-      // @media screen and (min-width: $tablet) {
-      //   font-size: 5.3rem;
-      // }
+    .titleContainer {
 
-      // @media screen and (min-width: $desktop) {
-      //   font-size: 6rem;
-      // }
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        .title,
+        .subtitle {
+            margin: 0px 0px;
+            text-align: center;
+            text-shadow: 5px 5px 3px $shadows;
+        }
+
+        .title {
+            font-size: 4rem;
+            animation: 1s ease 0s 1 slideInLeft;
+
+            // @media screen and (min-width: $sm) {
+            //   font-size: 5.3rem;
+            // }
+
+            // @media screen and (min-width: $md) {
+            //   font-size: 6rem;
+            // }
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            visibility: hidden;
+            animation: 0.1s forwards fadeIn, 1s ease 0.1s 1 slideInLeft;
+            // animation: 1s ease 1s 1 slideInLeft;
+        }
     }
-    .subtitle {
-      font-size: 1.5rem;
-      visibility: hidden;
-      animation: 0.1s forwards fadeIn, 1s ease 0.1s 1 slideInLeft;
-      // animation: 1s ease 1s 1 slideInLeft;
-    }
-  }
 }
 
 //MEDIAQUERY
-@media screen and (min-width: $tablet) {
-  .landingPage {
-    .titleContainer {
-      .title {
-        font-size: 5.3rem;
-      }
+@media screen and (min-width: $sm) {
+    .landingPage {
+        .titleContainer {
+            .title {
+                font-size: 5.3rem;
+            }
+        }
     }
-  }
 }
 
-@media screen and (min-width: $desktop) {
-  .landingPage {
-    .titleContainer {
-      .title {
-        font-size: 6rem;
-      }
+@media screen and (min-width: $md) {
+    .landingPage {
+        .titleContainer {
+            .title {
+                font-size: 6rem;
+            }
+        }
     }
-  }
 }
 
 // ANIMAZIONI
 @keyframes slideInLeft {
-  0% {
-    transform: translateX(-200%);
-  }
-  // 50% {
-  //   transform: translateX(-30%);
-  // }
-  70% {
-    transform: translateX(3%);
-  }
-  // 90%{
-  //   transform: translateX(-10%);
-  // }
-  100% {
-    transform: translateX(0);
-  }
+    0% {
+        transform: translateX(-200%);
+    }
+
+    // 50% {
+    //   transform: translateX(-30%);
+    // }
+    70% {
+        transform: translateX(3%);
+    }
+
+    // 90%{
+    //   transform: translateX(-10%);
+    // }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 @keyframes fadeIn {
-  99% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: visible;
-  }
+    99% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: visible;
+    }
 }

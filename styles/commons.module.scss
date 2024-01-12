@@ -1,112 +1,114 @@
 @import "./variables.module";
 
 .container {
-  padding: 0 3rem;
+    padding: 0 3rem;
 }
 
 .header {
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  padding: 1rem 0;
-  color: $light;
-  // background-image: $header-bg;
-  animation: 1s ease 0s 1 slideInLeft;
-  z-index: 999;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    padding: 1rem 0;
+    color: $light;
+    // background-image: $header-bg;
+    animation: 1s ease 0s 1 slideInLeft;
+    z-index: 999;
 
-  nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1rem;
-    font-size: 1.2rem;
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1rem;
+        font-size: 1.2rem;
 
-    * {
-      min-width: 7rem;
-      text-align: center;
-      padding: 0.5rem 1rem 0.9rem 1rem;
-      // margin: 0 0.2rem;
-      text-shadow: 2px 2px 2px $shadows;
+        * {
+            min-width: 7rem;
+            text-align: center;
+            padding: 0.5rem 1rem 0.9rem 1rem;
+            // margin: 0 0.2rem;
+            text-shadow: 2px 2px 2px $shadows;
+        }
+
+        a {
+            scale: 1;
+            transition: 0.5s;
+
+            &:hover {
+                scale: 1.4;
+            }
+        }
     }
-
-    a {
-      scale: 1;
-      transition: 0.5s;
-
-      &:hover {
-        scale: 1.4;
-      }
-    }
-  }
 }
 
 .footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid $light;
-  justify-content: center;
-  align-items: center;
-  color: $light;
+    display: flex;
+    flex: 1;
+    padding: 2rem 0;
+    border-top: 1px solid $light;
+    justify-content: center;
+    align-items: center;
+    color: $light;
 
-  .footerContainer {
-    p {
-      a {
-        font-weight: 700;
+    .footerContainer {
+        p {
+            a {
+                font-weight: 700;
 
-        &:hover {
-          text-decoration: underline;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
-      }
     }
-  }
 }
 
 .code {
-  background: $light;
-  color: $dark;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+    background: $light;
+    color: $dark;
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 //MEDIAQUERY
-@media screen and (min-width: $tablet) {
-  .header {
-    nav {
-      * {
-        margin: 0 1rem;
-      }
+@media screen and (min-width: $sm) {
+    .header {
+        nav {
+            * {
+                margin: 0 1rem;
+            }
+        }
     }
-  }
 }
 
-@media screen and (min-width: $desktop) {
-  .landingPage {
-    .titleContainer {
-      .title {
-        font-size: 6rem;
-      }
+@media screen and (min-width: $md) {
+    .landingPage {
+        .titleContainer {
+            .title {
+                font-size: 6rem;
+            }
+        }
     }
-  }
 }
 
 // ANIMAZIONI
 @keyframes slideInTop {
-  0% {
-    transform: translateY(-200%);
-  }
-  // 50% {
-  //   transform: translateX(-30%);
-  // }
-  70% {
-    transform: translateY(3%);
-  }
-  // 90%{
-  //   transform: translateX(-10%);
-  // }
-  100% {
-    transform: translateY(0);
-  }
+    0% {
+        transform: translateY(-200%);
+    }
+
+    // 50% {
+    //   transform: translateX(-30%);
+    // }
+    70% {
+        transform: translateY(3%);
+    }
+
+    // 90%{
+    //   transform: translateX(-10%);
+    // }
+    100% {
+        transform: translateY(0);
+    }
 }

@@ -10,46 +10,46 @@ import NET from "vanta/dist/vanta.net.min";
 import * as THREE from "three";
 
 export default function Main() {
-  const [vantaEffect, setVantaEffect] = useState(0);
-  const vantaRef = useRef(null);
+    const [vantaEffect, setVantaEffect] = useState(0);
+    const vantaRef = useRef(null);
 
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(
-        NET({
-          THREE,
-          el: vantaRef.current,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 100.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          color: 0xcaff69,
-          backgroundColor: 0x3c3c3c,
-          points: 6.0,
-          maxDistance: 15.0,
-          showDots: false,
-        })
-      );
-    }
-    return () => {
-      if (vantaEffect) {
-        vantaEffect.destroy();
-      }
-    };
-  }, [vantaEffect]);
+    useEffect(() => {
+        if (!vantaEffect) {
+            setVantaEffect(
+                NET({
+                    THREE,
+                    el: vantaRef.current,
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.0,
+                    minWidth: 100.0,
+                    scale: 1.0,
+                    scaleMobile: 1.0,
+                    color: 0xcaff69,
+                    backgroundColor: 0x3c3c3c,
+                    points: 6.0,
+                    maxDistance: 15.0,
+                    showDots: false,
+                })
+            );
+        }
+        return () => {
+            if (vantaEffect) {
+                vantaEffect.destroy();
+            }
+        };
+    }, [vantaEffect]);
 
-  return (
-    <main className={styles.main} ref={vantaRef}>
-      <div className={commonStyles.container}>
-        <Landing />
+    return (
+        <main className={styles.main} ref={vantaRef}>
+            <div className={commonStyles.container}>
+                <Landing />
 
-        <Works />
+                <Works />
 
-        <About />
-      </div>
-    </main>
-  );
+                {/* <About /> */}
+            </div>
+        </main>
+    );
 }
